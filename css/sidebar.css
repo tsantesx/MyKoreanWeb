@@ -1,0 +1,46 @@
+/* Sidebar Styles */
+nav.sidebar { 
+  width:80px; 
+  background:#1e1e1e; 
+  padding:20px; 
+  box-sizing:border-box; 
+  flex-shrink:0; 
+  height:100vh; 
+  overflow-y:auto; 
+}
+
+nav.sidebar h2 { 
+  display:none; 
+}
+
+nav.sidebar a { 
+  display:block; 
+  color:#4fc3f7; 
+  text-decoration:none; 
+  margin:10px 0; 
+  text-align:center; 
+}
+
+nav.sidebar a:hover { 
+  text-decoration:underline; 
+}
+
+.dropdown-btn { 
+  cursor:pointer; 
+  background:none; 
+  border:none; 
+  color:#4fc3f7; 
+  width:100%; 
+  text-align:center; 
+  padding:10px 0; 
+  font-size:1em; 
+}
+
+.dropdown-container { 
+  display:flex; 
+  flex-direction:column; 
+}
+
+.dropdown-container a { 
+  padding-left:0; 
+}
