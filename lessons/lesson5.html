@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson Template</title>
+
+  <!-- Favicon & Touch Icons -->
+  <link rel="icon" type="image/png" sizes="16x16" href="../media/icons/favicon-16x16.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="../media/icons/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="192x192" href="../media/icons/android-chrome-192x192.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="../media/icons/apple-touch-icon.png" />
+
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/sidebar.css">
+  <link rel="stylesheet" href="../css/day.css">
+
+  <style>
+    body { margin:0; font-family:sans-serif; display:flex; min-height:100vh; background:#121212; color:#eee; }
+    nav.sidebar { width:80px; background:#1e1e1e; padding:20px; box-sizing:border-box; flex-shrink:0; height:100vh; overflow-y:auto; }
+    nav.sidebar h2 { display:none; }
+    nav.sidebar a { display:block; color:#4fc3f7; text-decoration:none; margin:10px 0; text-align:center; }
+    nav.sidebar a:hover { text-decoration:underline; }
+    .dropdown-btn { cursor:pointer; background:none; border:none; color:#4fc3f7; width:100%; text-align:center; padding:10px 0; font-size:1em; }
+    .dropdown-container { display:none; flex-direction:column; }
+    .dropdown-container a { padding-left:0; }
+    main.day-content { flex:1; padding:40px; max-width:900px; margin:auto; }
+    main.day-content h1 { margin-bottom:20px; }
+    main.day-content p { margin-bottom:20px; font-size:1.1em; color:#ccc; }
+  </style>
+</head>
+<body>
+
+  <nav class="sidebar">
+    <button class="dropdown-btn">&#9660;</button>
+    <div class="dropdown-container">
+      <a href="lesson1.html">1</a>
+      <a href="lesson2.html">2</a>
+      <a href="lesson3.html">3</a>
+      <a href="lesson4.html">4</a>
+      <a href="lesson5.html">5</a>
+    </div>
+  </nav>
+
+  <main class="day-content">
+    <h1>Lesson Title</h1>
+    <p></p>
+  </main>
+
+  <script>
+    const dropdownBtn = document.querySelector('.dropdown-btn');
+    const dropdownContainer = document.querySelector('.dropdown-container');
+    dropdownBtn.addEventListener('click', () => {
+      dropdownContainer.style.display = dropdownContainer.style.display === 'flex' ? 'none' : 'flex';
+    });
+  </script>
+
+</body>
+</html>
