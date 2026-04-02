@@ -25,3 +25,17 @@ main.container p {
   font-size:1.1em;
   color:#ccc;
 }
+
+.home-btn {
+  display: block;
+  text-align: center;
+  padding: 10px 0;
+  margin-bottom: 15px;
+  color: #4fc3f7;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.home-btn:hover {
+  text-decoration: underline;
+}

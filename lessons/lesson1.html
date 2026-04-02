@@ -31,30 +31,33 @@
   </style>
 </head>
 <body>
-
-  <nav class="sidebar">
-    <button class="dropdown-btn">&#9660;</button>
-    <div class="dropdown-container">
-      <a href="lesson1.html">1</a>
-      <a href="lesson2.html">2</a>
-      <a href="lesson3.html">3</a>
-      <a href="lesson4.html">4</a>
-      <a href="lesson5.html">5</a>
-    </div>
-  </nav>
-
+<nav id="sidebar-container" class="sidebar"></nav>
+  
   <main class="day-content">
     <h1>Lesson Title</h1>
     <p></p>
   </main>
 
   <script>
-    const dropdownBtn = document.querySelector('.dropdown-btn');
-    const dropdownContainer = document.querySelector('.dropdown-container');
+fetch('../sidebar.html')
+  .then(response => response.text())
+  .then(data => {
+    const sidebar = document.getElementById('sidebar-container');
+    sidebar.innerHTML = data;
+
+    // Ensure elements exist inside the newly inserted sidebar
+    const dropdownBtn = sidebar.querySelector('.dropdown-btn');
+    const dropdownContainer = sidebar.querySelector('.dropdown-container');
+
+    // Make dropdown visible by default if you want it open
+    dropdownContainer.style.display = 'flex';
+
+    // Add toggle functionality
     dropdownBtn.addEventListener('click', () => {
       dropdownContainer.style.display = dropdownContainer.style.display === 'flex' ? 'none' : 'flex';
     });
-  </script>
+  });
+</script>
 
 </body>
 </html>
