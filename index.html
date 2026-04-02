@@ -3,86 +3,36 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1"/>
-  <title>My Korean Learning</title>
+  <title>My Korean Study Library</title>
   <!-- Favicon & Touch Icons -->
-  <!-- Standard 16 × 16 favicon (works for Safari tab) -->
   <link rel="icon" type="image/png" sizes="16x16" href="media/icons/favicon-16x16.png" />
-  <!-- 32 × 32 fallback for other browsers -->
   <link rel="icon" type="image/png" sizes="32x32" href="media/icons/favicon-32x32.png" />
-  <!-- High‑resolution favicon for Chrome/Android -->
   <link rel="icon" type="image/png" sizes="192x192" href="media/icons/android-chrome-192x192.png" />
-  <!-- Apple touch icon (iOS / Safari bookmarks / macOS favourites) -->
   <link rel="apple-touch-icon" sizes="180x180" href="media/icons/apple-touch-icon.png" />
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/sidebar.css">
   <style>
-    body { margin:0; font-family:sans-serif; background:#121212; color:#eee; }
-    .container { max-width:800px; margin:auto; padding:20px; }
-    header { text-align:center; margin-bottom:40px; }
-    header img { width:150px; height:150px; border-radius:50%; }
-    nav a { margin:0 10px; color:#4fc3f7; text-decoration:none; }
-    section { margin-bottom:40px; }
-    section h2 { border-bottom:1px solid #333; padding-bottom:5px; }
-    ul { padding-left:20px; }
-    footer { text-align:center; font-size:0.9em; color:#777; margin-top:40px; }
+    body { margin:0; font-family:sans-serif; display:flex; min-height:100vh; background:#121212; color:#eee; }
+    nav.sidebar { width:220px; background:#1e1e1e; padding:20px; box-sizing:border-box; flex-shrink:0; height:100vh; overflow-y:auto; }
+    nav.sidebar h2 { border-bottom:1px solid #333; padding-bottom:10px; }
+    nav.sidebar a { display:block; color:#4fc3f7; text-decoration:none; margin:10px 0; }
+    nav.sidebar a:hover { text-decoration:underline; }
+    main.container { flex:1; padding:40px; max-width:900px; margin:auto; }
+    main.container h1 { text-align:center; margin-bottom:20px; }
+    main.container p { text-align:center; margin-bottom:40px; font-size:1.1em; color:#ccc; }
   </style>
 </head>
 <body>
-  <div class="container">
-    <header>
-      
-      <h1>TsantesXhhhh</h1>
-      <p><em>VectorID — origin · magnitude · direction</em></p>
-      <nav>
-        <a href="#about">About</a>
-        <a href="#origin">Origin</a>
-        <a href="#magnitude">Magnitude</a>
-        <a href="#direction">Direction</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </header>
+  <nav class="sidebar">
+    <h2>Months</h2>
+    <a href="lessons/2026-04/day01.html">April 2026</a>
+    <a href="lessons/2026-05/day01.html">May 2026</a>
+    <!-- add more months as you create them -->
+  </nav>
 
-    <section id="about">
-      <h2>About</h2>
-      <p>Hi, I’m TsantesX. I build, study, and theorize at the intersection of physics, mathematics, Artificial Intelligrence and code. Welcome to my VectorID.</p>
-    </section>
-
-    <section id="origin">
-      <h2>Origin</h2>
-      <p>Key influences and foundational reading.</p>
-      <ul>
-        <li>“Introduction to Electrodynamics” — Griffiths</li>
-        <li>“A Student’s Guide to Vectors and Tensors” — Fleisch</li>
-        <!-- add more as you wish -->
-      </ul>
-    </section>
-
-    <section id="magnitude">
-      <h2>Magnitude</h2>
-      <ul>
-        <li>Languages & Tools: Python, MATLAB, C++</li>
-        <li>Publications: 2 conference papers</li>
-        <li>Certifications: AWS CCP</li>
-        <!-- add more as you build -->
-      </ul>
-    </section>
-
-    <section id="direction">
-      <h2>Direction</h2>
-      <ul>
-        <li><a href="https://github.com/tsantesx/VectorID">VectorID repo</a></li>
-        <li><a href="https://github.com/tsantesx/Knowledge-Atlas">Knowledge Atlas (in progress)</a></li>
-        <!-- add more links -->
-      </ul>
-    </section>
-
-    <section id="contact">
-      <h2>Contact</h2>
-      <p>Email: Andreas.tsantes7@gmail.com</p>
-      <p>GitHub: <a href="https://github.com/tsantesx">@tsantesx</a></p>
-    </section>
-
-    <footer>
-      &copy; 2025 TsantesX
-    </footer>
-  </div>
+  <main class="container">
+    <h1>Welcome to My Korean Study Library</h1>
+    <p>Organized by month and day, each page contains vocabulary, grammar notes, and video lessons. Select a month from the left to start learning!</p>
+  </main>
 </body>
 </html>
